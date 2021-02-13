@@ -1,0 +1,228 @@
+import praw
+
+ans = True
+while ans:
+    print("""
+    1. Aggregate Scrape
+    2. r/wallstreetbets Scrape
+    3. r/SatoshiStreetBets Scrape
+    4. r/hot_stocks Scrape
+    5. Exit
+    """)
+    ans = input("What would you like to do? ")
+    if ans == "1":
+      print("\n   Aggregate Scrape")
+      reddit = praw.Reddit(client_id='BZS_QiKfnCTMfw', client_secret='ynETBnazlYcYUNy6IdWFYedaR0_azg',
+                           user_agent='Stock Scraper')
+      print("\n   r/wallstreetbets")
+      hot_posts = reddit.subreddit('wallstreetbets').hot(limit=50)
+      for post in hot_posts:
+          print(post.title)
+      rising_posts = reddit.subreddit('wallstreetbets').rising(limit=50)
+      for post in rising_posts:
+          print(post.title)
+      print("\n   r/stocks")
+      hot_posts = reddit.subreddit('stocks').hot(limit=50)
+      for post in hot_posts:
+          print(post.title)
+      rising_posts = reddit.subreddit('stocks').rising(limit=50)
+      for post in rising_posts:
+          print(post.title)
+      print("\n   r/hot_stocks")
+      hot_posts = reddit.subreddit('hot_stocks').hot(limit=50)
+      for post in hot_posts:
+          print(post.title)
+      rising_posts = reddit.subreddit('hot_stocks').rising(limit=50)
+      for post in rising_posts:
+          print(post.title)
+      print("\n   r/SatoshiStreetBets")
+      hot_posts = reddit.subreddit('SatoshiStreetBets').hot(limit=50)
+      for post in hot_posts:
+          print(post.title)
+      rising_posts = reddit.subreddit('SatoshiStreetBets').rising(limit=50)
+      for post in rising_posts:
+          print(post.title)
+      print("\n   r/investing")
+      hot_posts = reddit.subreddit('investing').hot(limit=50)
+      for post in hot_posts:
+          print(post.title)
+      rising_posts = reddit.subreddit('investing').rising(limit=50)
+      for post in rising_posts:
+          print(post.title)
+      print("\n   r/Wallstreetbetsnew")
+      hot_posts = reddit.subreddit('Wallstreetbetsnew').hot(limit=50)
+      for post in hot_posts:
+          print(post.title)
+      rising_posts = reddit.subreddit('Wallstreetbetsnew').rising(limit=50)
+      for post in rising_posts:
+          print(post.title)
+      print("\   r/WallStreetBetsELITE")
+      hot_posts = reddit.subreddit('WallStreetBetsELITE').hot(limit=50)
+      for post in hot_posts:
+          print(post.title)
+      rising_posts = reddit.subreddit('WallStreetBetsELITE').rising(limit=50)
+      for post in rising_posts:
+          print(post.title)
+      print("\n   r/wallstreetbetsOGs")
+      hot_posts = reddit.subreddit('wallstreetbetsOGs').hot(limit=50)
+      for post in hot_posts:
+          print(post.title)
+      rising_posts = reddit.subreddit('wallstreetbetsOGs').rising(limit=50)
+      for post in rising_posts:
+          print(post.title)
+      print("\n   r/InvestmentClub")
+      hot_posts = reddit.subreddit('InvestmentClub').hot(limit=50)
+      for post in hot_posts:
+          print(post.title)
+      rising_posts = reddit.subreddit('InvestmentClub').rising(limit=50)
+      for post in rising_posts:
+          print(post.title)
+      print("\n   r/wallstreetbets_")
+      hot_posts = reddit.subreddit('wallstreetbets_').hot(limit=50)
+      for post in hot_posts:
+          print(post.title)
+      rising_posts = reddit.subreddit('wallstreetbets_').rising(limit=50)
+      for post in rising_posts:
+          print(post.title)
+      print("\n   r/CryptoCurrency")
+      hot_posts = reddit.subreddit('CryptoCurrency').hot(limit=50)
+      for post in hot_posts:
+          print(post.title)
+      rising_posts = reddit.subreddit('CryptoCurrency').rising(limit=50)
+      for post in rising_posts:
+          print(post.title)
+      print("\n   r/CryptoMarkets")
+      hot_posts = reddit.subreddit('CryptoMarkets').hot(limit=50)
+      for post in hot_posts:
+          print(post.title)
+      rising_posts = reddit.subreddit('CryptoMarkets').rising(limit=50)
+      for post in rising_posts:
+          print(post.title)
+      print("\n   r/CryptoCurrencies")
+      hot_posts = reddit.subreddit('CryptoCurrencies').hot(limit=50)
+      for post in hot_posts:
+          print(post.title)
+      rising_posts = reddit.subreddit('CryptoCurrencies').rising(limit=50)
+      for post in rising_posts:
+          print(post.title)
+      print("\n   r/StockMarket")
+      hot_posts = reddit.subreddit('StockMarket').hot(limit=50)
+      for post in hot_posts:
+          print(post.title)
+      rising_posts = reddit.subreddit('StockMarket').rising(limit=50)
+      for post in rising_posts:
+          print(post.title)
+    elif ans == "2":
+      print("\n   r/wallstreetbets Scrape")
+      reddit = praw.Reddit(client_id='BZS_QiKfnCTMfw', client_secret='ynETBnazlYcYUNy6IdWFYedaR0_azg',
+                           user_agent='Stock Scraper')
+      print("\n   Hot")
+      hot_posts = reddit.subreddit('wallstreetbets').hot(limit=50)
+      for post in hot_posts:
+          print(post.title)
+      print("\n   New")
+      new_posts = reddit.subreddit('wallstreetbets').new(limit=50)
+      for post in new_posts:
+          print(post.title)
+      print("\n   Top")
+      top_posts = reddit.subreddit('wallstreetbets').top(limit=50)
+      for post in top_posts:
+          print(post.title)
+      print("\n   Rising")
+      rising_posts = reddit.subreddit('wallstreetbets').rising(limit=50)
+      for post in rising_posts:
+          print(post.title)
+      print("\n   Controversial")
+      controversial_posts = reddit.subreddit('wallstreetbets').controversial(limit=50)
+      for post in controversial_posts:
+          print(post.title)
+      print("\n   Search: ticker")
+      search_ticker = reddit.subreddit('wallstreetbets').search(query='ticker')
+      for post in search_ticker:
+          print(post.title)
+      print("\n   Search: bubble")
+      search_bubble = reddit.subreddit('wallstreetbets').search(query='bubble')
+      for post in search_bubble:
+          print(post.title)
+      print("\n   Search: squeeze")
+      search_squeeze = reddit.subreddit('wallstreetbets').search(query='squeeze')
+      for post in search_squeeze:
+          print(post.title)
+    elif ans == "3":
+      print("\n   r/SatoshiStreetBets Scrape")
+      reddit = praw.Reddit(client_id='BZS_QiKfnCTMfw', client_secret='ynETBnazlYcYUNy6IdWFYedaR0_azg',
+                           user_agent='Stock Scraper')
+      print("\n   Hot")
+      hot_posts = reddit.subreddit('SatoshiStreetBets').hot(limit=50)
+      for post in hot_posts:
+          print(post.title)
+      print("\n   New")
+      new_posts = reddit.subreddit('SatoshiStreetBets').new(limit=50)
+      for post in new_posts:
+          print(post.title)
+      print("\n   Top")
+      top_posts = reddit.subreddit('SatoshiStreetBets').top(limit=50)
+      for post in top_posts:
+          print(post.title)
+      print("\n   Rising")
+      rising_posts = reddit.subreddit('SatoshiStreetBets').rising(limit=50)
+      for post in rising_posts:
+          print(post.title)
+      print("\n   Controversial")
+      controversial_posts = reddit.subreddit('SatoshiStreetBets').controversial(limit=50)
+      for post in controversial_posts:
+          print(post.title)
+      print("\n   Search: ticker")
+      search_ticker = reddit.subreddit('SatoshiStreetBets').search(query='ticker')
+      for post in search_ticker:
+          print(post.title)
+      print("\n   Search: bubble")
+      search_bubble = reddit.subreddit('SatoshiStreetBets').search(query='bubble')
+      for post in search_bubble:
+          print(post.title)
+      print("\n   Search: squeeze")
+      search_squeeze = reddit.subreddit('SatoshiStreetBets').search(query='squeeze')
+      for post in search_squeeze:
+          print(post.title)
+    elif ans == "4":
+      print("\n   r/hot_stocks Scrape")
+      reddit = praw.Reddit(client_id='BZS_QiKfnCTMfw', client_secret='ynETBnazlYcYUNy6IdWFYedaR0_azg',
+                           user_agent='Stock Scraper')
+      print("\n   Hot")
+      hot_posts = reddit.subreddit('hot_stocks').hot(limit=50)
+      for post in hot_posts:
+          print(post.title)
+      print("\n   New")
+      new_posts = reddit.subreddit('hot_stocks').new(limit=50)
+      for post in new_posts:
+          print(post.title)
+      print("\n   Top")
+      top_posts = reddit.subreddit('hot_stocks').top(limit=50)
+      for post in top_posts:
+          print(post.title)
+      print("\n   Rising")
+      rising_posts = reddit.subreddit('hot_stocks').rising(limit=50)
+      for post in rising_posts:
+          print(post.title)
+      print("\n   Controversial")
+      controversial_posts = reddit.subreddit('hot_stocks').controversial(limit=50)
+      for post in controversial_posts:
+          print(post.title)
+      print("\n   Search: ticker")
+      search_ticker = reddit.subreddit('hot_stocks').search(query='ticker')
+      for post in search_ticker:
+          print(post.title)
+      print("\n   Search: bubble")
+      search_bubble = reddit.subreddit('hot_stocks').search(query='bubble')
+      for post in search_bubble:
+          print(post.title)
+      print("\n   Search: squeeze")
+      search_squeeze = reddit.subreddit('hot_stocks').search(query='squeeze')
+      for post in search_squeeze:
+          print(post.title)
+    elif ans == "5":
+      print("\n   Goodbye")
+      ans = None
+      quit()
+    else:
+       print("\n   Not Valid Choice")
